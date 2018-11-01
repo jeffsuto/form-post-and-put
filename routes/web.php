@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function(){
-    return view('home');
-});
+Route::get('/', 'FormPost@index');
 
 Route::get('/form-post', 'FormPost@index');
 Route::post('/form-post/output', 'FormPost@output');

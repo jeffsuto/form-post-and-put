@@ -1,16 +1,13 @@
-@extends('template')
+@extends('templates.main')
 
 @section('title')
-    {{$title}}
+    {{ @$title }}
 @endsection
 
 @section('content')
-    <div class="page-header">
-        <h1 class="text-center">FORM METHOD <strong>{{$methodtitle}}</strong></h1>
-    </div>
-    <form class="form-horizontal col-md-8 col-md-offset-2" action="{{$action}}" method="POST">
-        {{csrf_field()}}
-        {{ $method }}
+    <form class="form-horizontal col-md-8" action="{{ @$action }}" method="POST">
+        {{ csrf_field() }}
+        {{ @$method }}
         <div class="form-group">
             <label class="col-sm-2 control-label">Nama</label>
             <div class="col-sm-10">

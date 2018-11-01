@@ -8,7 +8,7 @@ class FormPost extends Controller
 {
     public function index()
     {
-        $data['title'] = "Home";
+        $data['title'] = "Form Method POST";
         $data['methodtitle'] = "POST";
         $data['method'] = '';
         $data['action'] = "/form-post/output";
@@ -17,9 +17,8 @@ class FormPost extends Controller
 
     public function output(Request $request)
     {
-        $data['title'] = "Ouput";
+        $data['title'] = "Output Form Method POST";
         $data['method'] = "POST";
-        $data['methodtitle'] = "POST";
         $data['nama'] = $request->nama;
         $data['tempat'] = $request->tempat_lahir;
         $data['tanggal'] = $request->tanggal_lahir;
